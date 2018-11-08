@@ -39,7 +39,7 @@ var calculations = [
   {
     title: 'Load Rate',
     value: function(row) {
-      return row.loads / row.impressions
+      return row.loads * 100 / row.impressions
     },
     template: function(val, row) {
       return val.toFixed(1) + '%'
@@ -48,7 +48,7 @@ var calculations = [
   {
     title: 'Display Rate',
     value: function(row) {
-      return row.displays / row.loads
+      return row.displays * 100 / row.loads
     },
     template: function(val, row) {
       return val.toFixed(1) + '%'
